@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inglês Veterinário</title>
+  <meta name="description" content="Plataforma gratuita para praticar inglês de medicina veterinária: trilha com níveis, lições curtas, flashcards, dicionário pessoal, casos clínicos e pronúncia.">
+  <meta name="theme-color" content="#58cc02">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Ícones pequenos (traço) e o mascote, o Bento (um cãozinho veterinário) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4zM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+    <symbol id="i-lesson" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-done" viewBox="0 0 24 24"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="3.6"/></symbol>
+    <symbol id="i-bookf" viewBox="0 0 24 24"><path d="M3 5.5C5.5 4 8.5 4 11 5.5v14C8.5 18 5.5 18 3 19.5zM21 5.5C18.5 4 15.5 4 13 5.5v14c2.5-1.5 5.5-1.5 8 0z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7 3h10v5a5 5 0 0 1-10 0zM10 13.5h4v3h3V20H7v-3.5h3z" fill="currentColor" stroke="none"/><path d="M7 5H3.5v1.5A3.5 3.5 0 0 0 7 10M17 5h3.5v1.5A3.5 3.5 0 0 1 17 10" stroke-width="2"/></symbol>
+    <symbol id="doc" viewBox="0 0 120 130">
+      <ellipse cx="60" cy="124" rx="34" ry="5" fill="#000" opacity=".08"/>
+      <ellipse cx="22" cy="90" rx="9" ry="14" fill="#58a700" transform="rotate(20 22 90)"/>
+      <ellipse cx="98" cy="90" rx="9" ry="14" fill="#58a700" transform="rotate(-20 98 90)"/>
+      <path d="M20 62Q20 14 60 14Q100 14 100 62V100Q100 121 79 121H41Q20 121 20 100Z" fill="#58cc02"/>
+      <path d="M26 24Q8 22 6 46Q5 66 18 72Q26 58 30 36Z" fill="#a5642b"/>
+      <path d="M94 24Q112 22 114 46Q115 66 102 72Q94 58 90 36Z" fill="#a5642b"/>
+      <ellipse cx="78" cy="48" rx="14" ry="12" fill="#ffffff" opacity=".9"/>
+      <path d="M36 121V86Q60 100 84 86V121Z" fill="#ffffff"/>
+      <path d="M60 94V121" stroke="#e5e5e5" stroke-width="2"/>
+      <path d="M43 86Q42 106 58 108Q72 108 72 98" fill="none" stroke="#4b4b4b" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="72" cy="98" r="5" fill="#afafaf" stroke="#4b4b4b" stroke-width="2.5"/>
+      <circle cx="45" cy="50" r="11" fill="#ffffff"/><circle cx="75" cy="50" r="11" fill="#ffffff"/>
+      <circle cx="47" cy="52" r="6" fill="#3c3c3c"/><circle cx="77" cy="52" r="6" fill="#3c3c3c"/>
+      <circle cx="49" cy="49" r="2" fill="#ffffff"/><circle cx="79" cy="49" r="2" fill="#ffffff"/>
+      <ellipse cx="60" cy="66" rx="14" ry="10" fill="#e9f8d9"/>
+      <path d="M53 62Q60 58 67 62Q66 68 60 69Q54 68 53 62Z" fill="#3c3c3c"/>
+      <path d="M60 69V73M53 74Q57 78 60 73Q63 78 67 74" fill="none" stroke="#3c3c3c" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M57 76Q60 84 63 76" fill="#ff86a4"/>
+      <ellipse cx="33" cy="70" rx="5" ry="3" fill="#ff86a4" opacity=".7"/><ellipse cx="87" cy="70" rx="5" ry="3" fill="#ff86a4" opacity=".7"/>
+    </symbol>
+  </svg>
+
+  <div class="app">
+    <aside class="side" aria-label="Navegação principal">
+      <a class="logo" href="#/learn">inglês<span>vet</span></a>
+      <nav class="nav">
+        <a href="#/learn" data-route="learn"><span class="ni">🏠</span><span class="nl">Aprender</span></a>
+        <a href="#/practice" data-route="practice"><span class="ni">🎯</span><span class="nl">Praticar</span></a>
+        <a href="#/cards" data-route="cards"><span class="ni">🃏</span><span class="nl">Flashcards</span><span class="count" id="nav-due"></span></a>
+        <a href="#/cases" data-route="cases"><span class="ni">🩹</span><span class="nl">Casos clínicos</span></a>
+        <a href="#/dict" data-route="dict"><span class="ni">📖</span><span class="nl">Dicionário</span></a>
+        <a href="#/mine" data-route="mine"><span class="ni">⭐</span><span class="nl">Meu dicionário</span></a>
+        <a href="#/profile" data-route="profile"><span class="ni">📊</span><span class="nl">Progresso</span></a>
+        <a href="#/settings" data-route="settings"><span class="ni">⚙️</span><span class="nl">Ajustes</span></a>
+      </nav>
+      <div class="side-foot">
+        <button class="nav-btn" data-backup><span class="ni">💾</span><span class="nl">Salvar dados</span></button>
+        <a class="nav-btn" href="#/resources" data-route="resources"><span class="ni">📎</span><span class="nl">Recursos</span></a>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="mbar" id="mbar"></header>
+      <div class="content">
+        <main id="view" tabindex="-1"></main>
+        <aside class="rail" id="rail" aria-label="Seu dia"></aside>
+      </div>
+    </div>
+  </div>
+
+  <nav class="bnav" aria-label="Navegação">
+    <a href="#/learn" data-route="learn"><span class="ni">🏠</span><span class="nl">Aprender</span></a>
+    <a href="#/practice" data-route="practice"><span class="ni">🎯</span><span class="nl">Praticar</span></a>
+    <a href="#/cards" data-route="cards"><span class="ni">🃏</span><span class="nl">Cards</span></a>
+    <a href="#/cases" data-route="cases"><span class="ni">🩹</span><span class="nl">Casos</span></a>
+    <a href="#/dict" data-route="dict"><span class="ni">📖</span><span class="nl">Dicionário</span></a>
+    <a href="#/mine" data-route="mine"><span class="ni">⭐</span><span class="nl">Meu</span></a>
+    <a href="#/profile" data-route="profile"><span class="ni">📊</span><span class="nl">Perfil</span></a>
+  </nav>
+
+  <!-- Player de lições e exercícios (tela cheia) -->
+  <div id="player" class="player" hidden>
+    <div class="player-top">
+      <button class="icon-btn" id="pl-close" aria-label="Sair da lição"><svg class="ico lg"><use href="#i-x"/></svg></button>
+      <div class="pl-progress" role="progressbar" aria-label="Progresso da lição"><div id="pl-fill"></div></div>
+      <div class="pl-extra" id="pl-extra"></div>
+    </div>
+    <div class="player-body" id="pl-body"></div>
+    <div class="player-foot" id="pl-foot">
+      <div class="fb" id="pl-fb" aria-live="polite"></div>
+      <div class="foot-actions">
+        <button class="btn ghost" id="pl-skip">Pular</button>
+        <button class="btn primary" id="pl-check" disabled>Verificar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" id="modal-card"></div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
